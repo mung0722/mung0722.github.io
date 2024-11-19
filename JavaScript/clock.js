@@ -7,7 +7,7 @@ function updateClock() {
     const minutes = String(now.getMinutes()).padStart(2, '0'); // 분
     const seconds = String(now.getSeconds()).padStart(2, '0'); // 초
 
-    const formattedTime = `${year}-${month}-${date} ${hours}:${minutes}:${seconds}`;
+    const formattedTime = `${year}년 ${month}월 ${date}일 ${hours}:${minutes}:${seconds}`;
     document.getElementById('clock').textContent = formattedTime; // HTML 업데이트
   }
 
