@@ -1,11 +1,52 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>Blog</title>
-    <link rel="stylesheet" href="./style/index_style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Window Example</title>
+  <link rel="stylesheet" href="./style/styles.css">
 </head>
 <body>
-    
+  <nav class="dock">
+    <div class="item">
+        <img src="https://upload.wikimedia.org/wikipedia/en/9/98/FinderBigSur.png" onclick="openWindow('./SubHtml/example.html')">
+      <p>Finder</p>
+    </div>
+    <div class="item">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Adobe_Premiere_Pro_CC_icon.svg/240px-Adobe_Premiere_Pro_CC_icon.svg.png" onclick="openWindow('./SubHtml/example2.html')">
+      <p>Premiere Pro</p>
+    </div>
+  
+    <div class="item">
+      <img src="https://upload.wikimedia.org/wikipedia/en/2/23/System_Preferences_icon.png" onclick="openWindow('www.naver.com')">
+      <p>Setting</p>
+    </div>
+    <div class="item">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Safari_browser_logo.svg/2057px-Safari_browser_logo.svg.png" onclick="openWindow('example.html')">
+      <p>Safari</p>
+    </div>
+    <div class="item">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/480px-Instagram_logo_2016.svg.png" onclick="openWindow('example.html')">
+      <p>Instagram</p>
+    </div>
+  </nav>
+
+  <!-- 새로운 윈도우를 위한 section -->
+  <div id="custom-window" class="custom-window hidden">
+    <div class="custom-window-header">
+      <div class="window-controls">
+        <span class="close" onclick="closeWindow()">&#10005;</span>
+        <span class="minimize" onclick="minimizeWindow()">&#9473;</span>
+        <span class="maximize" onclick="toggleMaximize()">&#9723;</span>
+      </div>
+      <!-- <div class="title">Window Title</div> -->
+    </div>
+    <div class="custom-window-content">
+      <!-- 콘텐츠가 로드될 공간 -->
+    </div>
+    <div class="resize-handle"></div> <!-- 사이즈 조정 핸들 -->
+  </div>
+  <script src="./JavaScript/window.js"></script>
+  <script src="./JavaScript/dock.js"></script>
 </body>
 </html>
