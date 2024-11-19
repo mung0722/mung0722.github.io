@@ -1,19 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>mung0722.github.io</title>
-  <link rel="stylesheet" href="./style/styles.css">
+  <link rel="stylesheet" href="./style/index.css">
 </head>
 <body>
+  <header>
+        <div class="logo">
+          <img src="./img/logo.png">
+          <p>mung0722.github.io</p>
+        </div>
+        <div id="clock"></div>
+  </header>
   <nav class="dock">
     <div class="item">
-        <img src="https://upload.wikimedia.org/wikipedia/en/9/98/FinderBigSur.png" onclick="openWindow('./SubHtml/example.html')">
+        <img src="https://upload.wikimedia.org/wikipedia/en/9/98/FinderBigSur.png" onclick="openWindow('./secondhtml/scdhtml1.html')">
       <p>Finder</p>
     </div>
     <div class="item">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Adobe_Premiere_Pro_CC_icon.svg/240px-Adobe_Premiere_Pro_CC_icon.svg.png" onclick="openWindow('./SubHtml/example2.html')">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/2/24/Github_logo_svg.svg" onclick="openWindow('./SubHtml/example2.html')">
       <p>Premiere Pro</p>
     </div>
   
@@ -26,7 +33,7 @@
       <p>Safari</p>
     </div>
     <div class="item">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/480px-Instagram_logo_2016.svg.png" onclick="openWindow('example.html')">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/ITunes_12.2_logo.png" onclick="openWindow('example.html')">
       <p>Instagram</p>
     </div>
   </nav>
@@ -48,5 +55,6 @@
   </div>
   <script src="./JavaScript/window.js"></script>
   <script src="./JavaScript/dock.js"></script>
+  <script src="./JavaScript/clock.js"></script>
 </body>
 </html>
