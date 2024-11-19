@@ -41,6 +41,7 @@ function openWindow(url) {
   `;
 
   document.body.appendChild(newWindow);
+  centerWindow(newWindow);
 
   // 해당 URL과 창 ID를 맵에 저장
   openWindows.set(url, windowId);
@@ -48,6 +49,20 @@ function openWindow(url) {
   // 드래그 및 크기 조정 기능 추가
   addDragFunctionality(newWindow);
   addResizeFunctionality(newWindow);
+}
+
+function centerWindow(element) { //중앙으로 배치
+  const windowWidth = window.innerWidth;
+  const windowHeight = window.innerHeight;
+
+  const elementWidth = element.offsetWidth;
+  const elementHeight = element.offsetHeight;
+
+  const left = (windowWidth - elementWidth) / 2;
+  const top = (windowHeight - elementHeight) / 2;
+
+  element.style.left = `${left}px`;
+  element.style.top = `${top}px`;
 }
 
 function closeWindow(windowId, url) {
