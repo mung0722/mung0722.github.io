@@ -35,14 +35,7 @@ function openWindow(url) {
       <div class="title"> ${url}</div>
     </div>
     <div class="custom-window-content">
-       <iframe 
-          width="780"
-          height="450" 
-          src="${url}"
-          frameborder="0" 
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-          allowfullscreen>
-        </iframe>
+       <iframe src="${url}" width="100%" height="100%" style="border:none;"></iframe>
     </div>
     <div class="resize-handle"></div>
   `;
