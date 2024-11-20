@@ -77,8 +77,6 @@ max_hover.addEventListener('mouseout', () =>{
 });
 }
 
-
-
 function centerWindow(element) { //중앙으로 배치
   const windowWidth = window.innerWidth;
   const windowHeight = window.innerHeight;
