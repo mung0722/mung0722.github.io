@@ -35,11 +35,15 @@ function openWindow(url) {
       <div class="title"> ${url}</div>
     </div>
     <div class="custom-window-content">
-       <iframe src="${url}" width="100%" height="100%" style="border:none;"></iframe>
+       <iframe src="${url}" width="100%" height="400" style="border:none;"></iframe>
     </div>
     <div class="resize-handle"></div>
   `;
+  // iframe에서 유튜브를 재생할 때 사이즈가 마음에 안들면 상단 <iframe>에서 width와 height를 절대값으로 바꿀것
+  // 기본값
+  // <iframe src="${url}" width="100%" height="100%" style="border:none;"></iframe>
 
+  
   document.body.appendChild(newWindow);
   centerWindow(newWindow);
 
