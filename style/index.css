@@ -46,8 +46,8 @@ body {
   
   .custom-window {
     position: absolute;
-    width: 400px;
-    height: 300px;
+    width: 800px; /*iframe 사이즈 지정*/
+    height: 500px;
     background-color: white;
     border: 1px solid #ccc;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
