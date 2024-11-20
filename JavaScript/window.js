@@ -28,9 +28,9 @@ function openWindow(url) {
   newWindow.innerHTML = `
     <div class="custom-window-header">
       <div class="window-controls">
-        <span class="close" onclick="closeWindow('${windowId}', '${url}')">&#10005;</span>
-        <span class="minimize" onclick="minimizeWindow('${windowId}')">&#9473;</span>
-        <span class="maximize" onclick="toggleMaximize('${windowId}')">&#9723;</span>
+        <span class="close" onclick="closeWindow('${windowId}', '${url}')"><img id="close_hover" src="./img/button/close.png"></span>
+        <span class="minimize" onclick="minimizeWindow('${windowId}')"><img id="min_hover" src="./img/button/min.png"></span>
+        <span class="maximize" onclick="toggleMaximize('${windowId}')"><img id="max_hover" src="./img/button/max.png"></span>
       </div>
       <div class="title"> ${url}</div>
     </div>
@@ -49,7 +49,35 @@ function openWindow(url) {
   // 드래그 및 크기 조정 기능 추가
   addDragFunctionality(newWindow);
   addResizeFunctionality(newWindow);
+
+const close_hover = document.getElementById('close_hover');
+const min_hover = document.getElementById('min_hover');
+const max_hover = document.getElementById('max_hover');
+
+// close_hover
+close_hover.addEventListener('mouseover', () => {
+  close_hover.src = './img/button/close_hover.png';
+});
+close_hover.addEventListener('mouseout', () =>{
+  close_hover.src = './img/button/close.png';
+});
+// min_hover
+min_hover.addEventListener('mouseover', () => {
+  min_hover.src = './img/button/min_hover.png';
+});
+min_hover.addEventListener('mouseout', () =>{
+  min_hover.src = './img/button/min.png';
+});
+// max_hover
+max_hover.addEventListener('mouseover', () => {
+  max_hover.src = './img/button/max_hover.png';
+});
+max_hover.addEventListener('mouseout', () =>{
+  max_hover.src = './img/button/max.png';
+});
 }
+
+
 
 function centerWindow(element) { //중앙으로 배치
   const windowWidth = window.innerWidth;

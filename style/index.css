@@ -76,7 +76,7 @@ body {
   
   .window-controls span {
     cursor: pointer;
-    margin-left: 8px;
+    margin-left: 3px;
   }
   
   .custom-window-content {
@@ -139,4 +139,13 @@ body {
 
   .dock .item img {
     cursor: pointer;
+  }
+  .custom-window-header .window-controls .close img,
+  .custom-window-header .window-controls .minimize img,
+  .custom-window-header .window-controls .maximize img{
+    width: 12px;
+    margin-top: 5px;
+  }
+  .custom-window-header .title{
+    margin-top: 1px;
   }
