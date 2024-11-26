@@ -1,0 +1,9 @@
+*{margin: 0; padding: 0;}
+#wrap{
+    background-color: rgb(94, 94, 94);
+}
+#wrap #leftcontent{
+    width: 500px;
+    height: 600px;
+    background-color: aqua;
+}

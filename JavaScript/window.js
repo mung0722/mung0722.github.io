@@ -1,7 +1,7 @@
 let windowCount = 0; // 창의 고유 ID를 위한 카운터
 const openWindows = new Map(); // URL별로 열린 창을 추적
 
-function openWindow(url) {
+function openWindow(url, windowwidth, windowheight) {
   // 이미 해당 URL에 대한 창이 열려 있는지 확인
   if (openWindows.has(url)) {
     const existingWindowId = openWindows.get(url);
@@ -25,6 +25,8 @@ function openWindow(url) {
   newWindow.id = windowId;
   newWindow.className = 'custom-window';
   newWindow.style.zIndex = windowCount; 
+  newWindow.style.width = `${windowwidth}px`;
+  newWindow.style.height = `${windowheight}px`;
   newWindow.innerHTML = `
     <div class="custom-window-header">
       <div class="window-controls">
@@ -35,7 +37,7 @@ function openWindow(url) {
       <div class="title"> ${url}</div>
     </div>
     <div class="custom-window-content">
-       <iframe src="${url}" width="100%" height="500" style="border:none;"></iframe>
+       <iframe src="${url}" width="${windowwidth}" height="${windowheight}" style="border:none;"></iframe>
     </div>
     <div class="resize-handle"></div>
   `;
@@ -79,6 +81,11 @@ max_hover.addEventListener('mouseover', () => {
 max_hover.addEventListener('mouseout', () =>{
   max_hover.src = './img/button/max.png';
 });
+
+// const custom_window = document.querySelector('.custom-window');
+// custom_window.style.width = `${windowwidth}px`;
+// custom_window.style.height = `${windowheight}px`;
+
 }
 
 function centerWindow(element) { //중앙으로 배치
