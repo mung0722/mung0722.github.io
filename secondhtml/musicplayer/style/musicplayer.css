@@ -1,9 +1,99 @@
-*{margin: 0; padding: 0;}
+*{margin: 0; padding: 0; box-sizing: border-box; font-family: sans-serif;}
 #wrap{
-    background-color: rgb(94, 94, 94);
+    /* background-color: rgb(94, 94, 94); */
 }
 #wrap #leftcontent{
     width: 500px;
     height: 600px;
-    background-color: aqua;
+    background-color: #999;
+    float: left;
+}
+#wrap #rightcontent{
+    width: 500px;
+    height: 600px;
+    background-color: #3f3f3f;
+    float: left;
+}
+#wrap #leftcontent .musicheader{
+    /* float: left; */
+    width: 100%;
+    height: 50px;
+    /* background-color: bisque; */
+}
+#wrap #leftcontent .logo{
+    height: 260px;
+}
+#wrap #leftcontent .logo .circle_logo{
+    /* float: left;  */
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    /* background-color: black; */
+    border: 5px solid white;
+    box-shadow: 0px 0px 50px white;
+    margin: 0 auto;
+    margin-bottom: -30px;
+}
+#wrap #leftcontent .musicletter{
+    height: 80px;
+    text-align: center;
+}
+#wrap #leftcontent .musicletter .musictitle{
+    margin-top: 10px;
+    font-size: 25px;
+    font-family: sans-serif;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: white;
+}
+#wrap #leftcontent .musicletter .musicsinger{
+    margin-top: 5px;
+    font-family: sans-serif;
+    color: #333;
+    font-weight: bold;
+    letter-spacing: 5px;
+}
+
+
+/* rightcontent */
+#wrap #rightcontent #playlistheader{
+    width: 100%;
+    height: 30px;
+    background-color: beige;
+}
+#wrap #rightcontent #playlistheader > p{
+    height: 100%;
+    text-align: left;
+    padding: 6px 0px 0px 10px;
+    font-size: 17px;
+    font-family: sans-serif;
+    letter-spacing: 4px;
+}
+#wrap #rightcontent .player{
+    width: 100%;
+    height: 70px;
+    background-color: antiquewhite;
+}
+#wrap #rightcontent .player a{
+    text-decoration: none;
+    color: black;
+}
+#wrap #rightcontent .player:hover{
+    background-color: #8c8c8c;
+}
+#wrap #rightcontent .player .playertitle{
+    width: 100%;
+    height: 40px;
+}
+#wrap #rightcontent .player .playertitle > p{
+    padding: 10px;
+    font-size: 20px;
+}
+#wrap #rightcontent .player .playersinger{
+    width: 100%;
+    height: 30px;
+}
+#wrap #rightcontent .player .playersinger > p{
+    padding: 3px 0px 0px 15px;
+    color: rgb(124, 124, 124);
 }
